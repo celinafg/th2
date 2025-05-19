@@ -1,0 +1,129 @@
+@keyframes floatCircle {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(5px, -3px) scale(1.02);
+  }
+  50% {
+    transform: translate(-2px, 5px) scale(0.98);
+  }
+  75% {
+    transform: translate(-4px, -2px) scale(1.01);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes subtleShake {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(1px, 1px);
+  }
+  50% {
+    transform: translate(-1px, 0px);
+  }
+  75% {
+    transform: translate(0px, -1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes gradientRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes orbitMotion {
+  0% {
+    transform: rotate(0deg) translateX(var(--orbit-radius, 5px)) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(var(--orbit-radius, 5px)) rotate(-360deg);
+  }
+}
+
+.animate-float {
+  animation: floatCircle 10s ease-in-out infinite;
+}
+
+.animate-float-delay-0 {
+  animation: floatCircle 10s ease-in-out infinite;
+  --direction-x: 8px;
+  --direction-y: -8px;
+  --orbit-radius: 5px;
+}
+
+.animate-float-delay-1 {
+  animation: floatCircle 10s ease-in-out infinite;
+  animation-delay: -2s;
+  --direction-x: 8px;
+  --direction-y: 8px;
+  --orbit-radius: 6px;
+}
+
+.animate-float-delay-2 {
+  animation: floatCircle 10s ease-in-out infinite;
+  animation-delay: -4s;
+  --direction-x: -8px;
+  --direction-y: 8px;
+  --orbit-radius: 7px;
+}
+
+.animate-float-delay-3 {
+  animation: floatCircle 10s ease-in-out infinite;
+  animation-delay: -6s;
+  --direction-x: -8px;
+  --direction-y: -8px;
+  --orbit-radius: 8px;
+}
+
+.animate-subtle-shake {
+  animation: subtleShake 0.5s ease-in-out infinite;
+}
+
+.animate-process-motion {
+  animation: orbitMotion 15s linear infinite !important;
+}
+
+.animate-gradient-rotate {
+  background: linear-gradient(135deg, #a0c2f8, #b7e5d3, #d6c5e8, #f8d1a0);
+  background-size: 300% 300%;
+  animation: gradientRotate 8s ease infinite;
+}
+
+.transition-long {
+  transition: all 2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blur-xl {
+  filter: blur(8px);
+}
+
+.blur-2xl {
+  filter: blur(16px);
+}
+
+.blur-3xl {
+  filter: blur(24px);
+}
+
+.duration-2000 {
+  transition-duration: 2000ms;
+}
+
+.duration-3000 {
+  transition-duration: 3000ms;
+}
