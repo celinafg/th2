@@ -120,7 +120,7 @@ const WendiCircleWithOrbits = ({
           transition: { type: 'spring', stiffness: 400, damping: 17 },
         }}
       >
-        <span className={`font-bold text-dark ${selectedSize.logo}`}>W</span>
+        <span className={`font-bold text-dark font-dmSerif  ${selectedSize.logo}`}>W</span>
 
         <span className={`text-gray-400 flex items-center ${selectedSize.subtext}`}>
           <span className="mr-1">⬆️</span>

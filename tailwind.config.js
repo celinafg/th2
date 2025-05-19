@@ -21,6 +21,7 @@ export default {
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
+        dmSerif: ['DM Serif Display', 'serif'],
       },
 
       // Add custom animations
